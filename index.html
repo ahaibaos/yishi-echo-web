@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // 开发环境：自动注销残留 Service Worker 并清理其缓存（防止旧缓存导致看不到更新）。
+      // 生产构建中 production 会被替换为 production，此逻辑不会执行。
+      if ('production' === 'dev' && 'serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function (rs) {
+          rs.forEach(function (r) { r.unregister(); });
+        });
+        if (window.caches && window.caches.keys) {
+          window.caches.keys().then(function (keys) {
+            keys.forEach(function (k) { window.caches.delete(k); });
+          });
+        }
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f1115" />
+    <meta name="description" content="类酒馆 - 兼容 SillyTavern 数据格式的独立角色扮演聊天前端" />
+    <link rel="icon" type="image/png" href="./icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <title>异世回响 · Tavern</title>
+    <script type="module" crossorigin src="./assets/index-CThRJpbE.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BPPtT22R.css">
+  <link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
