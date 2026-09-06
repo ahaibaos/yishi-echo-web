@@ -1,8 +1,8 @@
 {
     "name":  "Yishi Echo",
-    "apkUrl":  "YishiEcho-1.0.80.apk",
-    "versionName":  "1.0.80",
-    "publishedAt":  "2026-09-06T06:36:15.3257364Z",
-    "versionCode":  80,
-    "notes":  "异世回响 v1.0.80 更新说明\n\n🔁 APK 更新:多镜像自动回退(修复「检查更新失败」)\n· 之前版本内置的更新地址在部分网络(尤其部分地区访问 GitHub 受限)下连不通,且老版本(≤1.0.78)内置地址与清单目录不匹配——都会导致「检查更新失败」\n· v1.0.80 起:内置 3 个更新镜像,检查时自动依次尝试,哪个通就用哪个:\n  1) GitHub Pages:https://ahaibaos.github.io/yishi-echo-web/apk\n  2) GitHub Raw:https://raw.githubusercontent.com/ahaibaos/yishi-echo-web/main/apk\n  3) Cloudflare 隧道(中国大陆可直连性最佳):https://window-nathan-pope-wholesale.trycloudflare.com/update\n· 命中备用源后自动切换并提示来源;全部失败才会报错(并列出每个镜像的失败原因)\n· 手动装好本版后,以后即可一键更新;若个别网络全都不通,仍可在「软件更新 → 更新服务器地址」粘贴可用的镜像地址保存\n"
+    "apkUrl":  "YishiEcho-1.0.81.apk",
+    "versionName":  "1.0.81",
+    "publishedAt":  "2026-09-06T06:46:50.3961573Z",
+    "versionCode":  81,
+    "notes":  "异世回响 v1.0.81 更新说明\n\n🔧 修复「原生更新插件不可用」\n· 根因:原生更新插件(UpdatePlugin)在 Android 侧一直正常注册,但 JS 侧缺少 registerPlugin 代理声明——Capacitor 不会自动把自定义插件挂到 window.Capacitor.Plugins 上,导致旧版本始终判定「插件不可用」\n· v1.0.81 起通过 @capacitor/core 的 registerPlugin(\u0027Update\u0027) 显式声明代理,原生下载安装正式打通:\n  检查更新 → 下载 → 唤起系统安装器 → 一键安装\n· 本版同时保留:三镜像自动回退、命中源显示\n"
 }
