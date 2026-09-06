@@ -1,0 +1,8 @@
+{
+    "name":  "Yishi Echo",
+    "apkUrl":  "YishiEcho-1.0.79.apk",
+    "versionName":  "1.0.79",
+    "publishedAt":  "2026-09-06T06:27:30.9226810Z",
+    "versionCode":  79,
+    "notes":  "异世回响 v1.0.79 更新说明\n\n🔁 APK 自动更新通道切换至 GitHub\n· 更新服务器由临时隧道改为你的 GitHub 仓库(永久、稳定、任意网络可达):\n  https://raw.githubusercontent.com/ahaibaos/yishi-echo-web/main/apk\n· 此后每个新版本,APK 与 update.json 会随发布自动上传到仓库 apk/ 目录\n· 老版本(v1.0.78 及以前)仍走旧通道升级到本版,之后即自动改用 GitHub 通道\n· 旧客户端可从本版起「一键更新」:设置 → 检查更新 → 直接下载安装新包(本版即验证通道)\n"
+}
